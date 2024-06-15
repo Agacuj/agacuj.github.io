@@ -1,0 +1,197 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+
+	<style type="text/css">
+		#gmaps {
+		    width: 100%;
+		    height: 250px;
+		}
+	</style>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtmZX8g59fxY_nqTiBqGGfciTLKmWMksY">
+	</script>
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/js/lib/angular-cookies.min.js"></script>
+  <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+	
+  <script src="/js/common.js"></script>
+  <script src="/js/common/aquisi.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl" ng-class="{ 'bodyView': !appMenu.collapsed }">
+
+	<section class="app">
+<aside class="appmenu" ng-class="{ 'collapsed': appMenu.collapsed }">
+	<div class="container">
+        <ul>
+        	<li><a href="/">Inicio</a></li>
+        	<li><a href="/que_es_agacuj">¿Qué es AGACUJ?</a></li>
+        	<li><a href="/agacuj_y_la_verdad">AGACUJ y la verdad</a></li>
+        	<li><a href="/la_cultura_del_jamon">La cultura del jamón</a></li>
+        	<li><a href="/agenda">Agenda</a></li>
+        	<li><a href="/memoria">Memoria</a></li>
+        	<li><a href="/videos">Vídeos</a></li>
+        	<li><a href="/consumidor">Área del Consumidor</a></li>
+        	<li><a href="/aquisi">Campaña <span>"</span>AQUÍ <span>SÍ"</span></a></li>
+        	<li><a href="/ser_socio">¿Quieres ser soci@?</a></li>
+        	<li><a href="/ejemplos">Actuamos con el ejemplo</a></li>
+        	<li><a href="/tambien_son_ejemplo">También son ejemplo</a></li>
+        	<li><a href="/seguimos">Seguimos</a></li>
+        </ul>
+	</div>
+</aside>
+
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div class="container">
+		<div ng-click="appMenu.collapsed = !appMenu.collapsed" class="nav toggle">
+			<img class="logo" src="/images/barlogo.png">
+			<button class="btn">
+				<span class="glyphicon glyphicon-menu-up" ng-hide="appMenu.collapsed"></span>
+				<span class="glyphicon glyphicon-menu-down" ng-show="appMenu.collapsed"></span>
+			</button>
+		</div>
+		<button onclick="location.href='/usuario'" class="btn btn-success btn-access common">
+			<span class="glyphicon glyphicon-user"></span>
+			<span class="caption">Área Soci@s</span>
+		</button>
+	</div>
+</header>
+
+		<!-- content -->
+		<section class="content">
+<section ng-controller="aquisiCtrl" class="posts">
+    <div class="container left" style="padding-bottom:0;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">
+                    <span>"Aquí <strong>SÍ</strong>"</span>
+                </h2>
+				<h3 class="subtitle">
+					<strong>Establecimientos</strong> asociados donde se corta jamón y/o paleta a <strong>cuchillo</strong> identificados con la placa <strong>Aquí SÍ</strong>.
+				</h3>
+            </div>
+        </div>
+    </div>
+    <div de-scroll-top min-width="769" ng-class="{map:map}" style="position:absolute;width:100%;height:0;overflow:visible;background-color:#fff;">
+	    <div class="container" style="margin-top:0;padding:0;">
+	        <div class="row" style="position: relative;background-color:#fff;">
+				<div ng-show="map" class="col-sm-12">
+					<div my-map=""></div>
+				</div>
+	            <div class="col-sm-12 form-inline" style="text-align:left;padding:20px;border-bottom: 1px solid #e4e4e4;">
+					<button ng-click="displayMap(map)" class="btn btn-default pull-right">
+						<span class="btn-map-label">Mapa </span>
+						<span ng-class="{'glyphicon-chevron-up':map,'glyphicon-chevron-down':!map}" class="glyphicon"></span>
+					</button>
+					<div class="provs" style="inline-block">
+						<label>Provincia</label>
+						<select ng-model="selectProv" class="form-control" style="margin-left:8px;">
+							<option ng-repeat="prov in provs" value="{{prov.name}}">{{prov.name}}</option>
+						</select>
+					</div>
+			    </div>
+			</div>
+	    </div>
+    </div>
+    <div ng-class="{map:map}" class="container aquisi">
+    	<div ng-show="busy" style="position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);">
+    	</div>
+        <div class="row">
+            <div class="col-sm-12" style="min-height:200px;">
+  				<div ng-repeat="place in places" class="place">
+  					<div ng-class="{hasImage:place.imageUrl}" class="place-main">
+	  					<p class="title">{{place.name}}</p>
+						<div class="place-image">
+<!--						
+							<span class="glyphicon glyphicon-fullscreen"></span>
+-->							
+							<div ng-click="displayPlace(place)" style="background-image:url('{{place.imageUrl}}')"></div>
+						</div>
+						<div class="pobl">
+		  					<div class="body">
+		  						<button ng-show="place.loc.lat != 0 && place.loc.lng != 0" ng-click="locatePlace(place)" class="btn btn-default">
+			  						<span class="glyphicon glyphicon-map-marker"></span>
+		  						</button>
+		  						<button ng-click="displayPlace(place)" class="btn btn-default">
+			  						<span class="glyphicon glyphicon-fullscreen"></span>
+		  						</button>
+		  					</div>
+							<span class="pull-left">{{place.dir}}</span>
+							<span class="pull-right"><strong>{{place.pobl}}</strong></span>
+						</div>
+  					</div>
+  				</div>
+		    </div>
+	    </div>
+    </div>
+</section>		</section>
+
+		<div class="push">
+		</div>
+	</section>
+
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+	
+</body>
+
+
+  
+</html>

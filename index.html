@@ -1,0 +1,195 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-cookies.min.js"></script>
+    <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+
+    <script src="/js/common.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+
+<body ng-controller="mainCtrl">
+
+	<section class="app">
+	
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div style="text-align: left;" class="container">
+		<img class="logo" src="/images/barlogo.png" style="margin: 12px;">
+    <button onclick="location.href='/usuario'" class="btn btn-success btn-access index">
+        <span class="caption">Área Soci@s</span>
+    </button>
+	</div>
+</header>
+	
+	    <!-- content -->
+	    <section class="content">
+					<section style="position: relative;padding-top:3em;">
+            <div class="container" style="padding-bottom: 18px;position: relative;margin-bottom: 0;">
+              <div class="row">
+                <div style="text-align:center;" class="col-sm-12">
+	                <h1 style="margin-bottom:30px;">Asociación Global Amigos/as del Cuchillo Jamonero</h1>
+									<img src="/images/mision.png" style="width: 100%;">
+									<div style="text-align: right;color: #fff;padding: 12px 12px 0;">#JUNTOSSUMAMOSMÁS</div>
+						    </div>
+					    </div>
+						</div>
+						<div style="position: absolute;bottom: 0;left: 0;right: 0;height: 53px;background-color: #309424;z-index: -1;">
+					  </div>
+	        </section>
+	        
+	        <section class="panels green">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-sm-4">
+	                        <div class="col">
+	                            <a href="/que_es_agacuj" class="content">
+	                                <h3>¿Qué es AGACUJ?</h3>
+	                                <p>La asociación y sus principios<span>></span></p>
+	                            </a>
+	                            <a href="/agacuj_y_la_verdad" class="content">
+	                                <h3>AGACUJ y la verdad</h3>
+	                                <p>Que no te confundan<span>></span></p>
+	                            </a>
+	                            <a href="/la_cultura_del_jamon" class="content">
+	                                <h3>La cultura del jamón</h3>
+	                                <p>Un paseo educativo<span>></span></p>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-4">
+	                        <div class="col">
+	                            <a href="/agenda" class="content">
+	                                <h3>Agenda</h3>
+	                                <p>Lo que vamos a hacer<span>></span></p>
+	                            </a>
+	                            <a href="/memoria" class="content">
+	                                <h3>Memoria</h3>
+	                                <p>Lo que hemos hecho<span>></span></p>
+	                            </a>
+	                            <a href="/videos" class="content">
+	                                <h3>Vídeos</h3>
+	                                <p>AGACUJ en fotogramas<span>></span></p>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-4">
+	                        <div class="col">
+	                            <a href="/consumidor" class="content">
+	                                <h3>Área del Consumidor</h3>
+	                                <p>Resolvemos tus dudas<span>></span></p>
+	                            </a>
+	                            <a href="/aquisi" class="content">
+	                                <h3>Campaña <span>"</span>AQUÍ <span>SÍ"</span></h3>
+	                                <p><strong>Aquí</strong> se corta jamón a cuchillo<span>></span></p>
+	                            </a>
+	                            <a href="/ser_socio" class="content">
+	                                <h3>¿Quieres ser soci@?</h3>
+	                                <p>Infórmate<span>></span></p>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	
+	        <section class="posts">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-sm-12 link">
+	                        <h2>
+	                            <span>Actuamos con el ejemplo</span>
+	                        </h2>
+	                        <p>La mejor forma de demostrar aquello sobre lo que se predica es practicándolo.</p>
+	                        <button class="btn btn-default" onclick="location.href='/ejemplos'">Leer más</button>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-sm-12 link">
+	                        <h2>
+	                            <span>Porque también son ejemplo</span>
+	                        </h2>
+	                        <p>Comportamientos, hechos y actuaciones ejemplares.</p>
+	                        <button class="btn btn-default" onclick="location.href='/tambien_son_ejemplo'">Leer más</button>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-sm-12 link">
+	                        <h2 style="color: #000;">Seguimos</h2>
+	                        <p>En contacto, mejorando, trabajando.<br>Continuamos con vuestras opiniones y experiencias.</p>
+	                        <button class="btn btn-default" onclick="location.href='/seguimos'">Ver/Añadir Experiencias</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	
+	    </section>
+	
+	    <div class="push">
+	    </div>
+	</section>
+	
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+
+</body>
+
+
+  
+</html>

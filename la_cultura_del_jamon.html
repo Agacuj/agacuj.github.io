@@ -1,0 +1,259 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/js/lib/angular-cookies.min.js"></script>
+  <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+	
+  <script src="/js/common.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl" ng-class="{ 'bodyView': !appMenu.collapsed }">
+
+	<section class="app">
+<aside class="appmenu" ng-class="{ 'collapsed': appMenu.collapsed }">
+	<div class="container">
+        <ul>
+        	<li><a href="/">Inicio</a></li>
+        	<li><a href="/que_es_agacuj">¿Qué es AGACUJ?</a></li>
+        	<li><a href="/agacuj_y_la_verdad">AGACUJ y la verdad</a></li>
+        	<li><a href="/la_cultura_del_jamon">La cultura del jamón</a></li>
+        	<li><a href="/agenda">Agenda</a></li>
+        	<li><a href="/memoria">Memoria</a></li>
+        	<li><a href="/videos">Vídeos</a></li>
+        	<li><a href="/consumidor">Área del Consumidor</a></li>
+        	<li><a href="/aquisi">Campaña <span>"</span>AQUÍ <span>SÍ"</span></a></li>
+        	<li><a href="/ser_socio">¿Quieres ser soci@?</a></li>
+        	<li><a href="/ejemplos">Actuamos con el ejemplo</a></li>
+        	<li><a href="/tambien_son_ejemplo">También son ejemplo</a></li>
+        	<li><a href="/seguimos">Seguimos</a></li>
+        </ul>
+	</div>
+</aside>
+
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div class="container">
+		<div ng-click="appMenu.collapsed = !appMenu.collapsed" class="nav toggle">
+			<img class="logo" src="/images/barlogo.png">
+			<button class="btn">
+				<span class="glyphicon glyphicon-menu-up" ng-hide="appMenu.collapsed"></span>
+				<span class="glyphicon glyphicon-menu-down" ng-show="appMenu.collapsed"></span>
+			</button>
+		</div>
+		<button onclick="location.href='/usuario'" class="btn btn-success btn-access common">
+			<span class="glyphicon glyphicon-user"></span>
+			<span class="caption">Área Soci@s</span>
+		</button>
+	</div>
+</header>
+
+		<!-- content -->
+		<section class="content">
+<section class="posts">
+    <div class="container left post">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">
+                    <span>La cultura del jamón</span>
+                </h2>
+				<h3  class="subtitle">
+					Cada <strong>jamón</strong> es una pieza única, curada con esmero por profesionales del sector jamonero.
+				</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+				<p style="text-align:justify;">
+					El proceso de obtención de un jamón o paleta "curado" puede realizarse de forma más o 
+					menos industrializada. Cuando dicho proceso es más tradicional, las piezas proceden de 
+					animales en libertad (normalmente en dehesas) y son maduradas y envejecidas en secaderos 
+					y bodegas naturales. Aunque las producciones más industrializadas permiten obtener una 
+					gran uniformidad entre las piezas, es en las producciones tradicionales, más irregulares, 
+					donde se puede encontrar la excelencia.<br>
+				</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            	<h3>Tipos de jamón</h3>
+				<p style="text-align:justify;">
+					El <strong>Serrano ETG</strong> es un jamón procedente de un cerdo de capa blanca cuyo sistema 
+					de producción se realiza en granjas y cuya alimentación se basa en piensos. Según sus tiempos 
+					de curación se clasifican en <strong>"bodega"</strong>, con una curación de 9 a 12 meses, 
+					<strong>"reserva"</strong> de 12 a 14 meses y <strong>"gran	reserva"</strong> con curaciones a 
+					partir de 15 meses.<br>
+					El <strong>Serrano ETG de la fundación</strong> es un serrano ETG que está vigilado y amparado 
+					por la fundación de	<strong>Jamón Serrano</strong>.<br> 
+					Los jamones <strong>IGP de Trevelez</strong> e <strong>IGP de Serón</strong> son también jamones procedentes de 
+					cerdos de capa blanca. Sus distintas clasificaciones están recogidas en sus distintos pliegos de 
+					condiciones, amparados por su consejo regulador.<br>
+					Los jamones <strong>DOP de Teruel</strong> son jamones procedentes de cerdos de capa blanca. 
+					Son los únicos jamones blancos con sello DOP.<br>
+					El <strong>Ibérico</strong> es un jamón que procede de cerdos de raza ibérica y se distinguen 
+					según raza y alimentación. Así, según raza tenemos entre los puros o 100% ibérico y los cruzados, 
+					denominados	ibéricos según la legislación española. Ambos tipos de jamón son diferentes en su 
+					naturaleza intrínseca. Los 100% ibéricos serán jamones más estilizados y de caña más fina, normalmente 
+					ligados a la explotación tradicional en la dehesa y en especial a la montanera. Los tiempos 
+					de curación alcanzan en muchas ocasiones los 4 años de envejecimiento en bodega. Si a este 
+					tiempo le añadimos los casi dos años de cría de este tipo de cerdos estamos es un proceso total 
+					de casi seis años.<br>
+					En lo referente al aspecto racial, los cerdos pueden ser 100% ibérico o cruzados al 50% o el 75% 
+					de raza ibérica. Cuando además se crían en régimen extensivo en libertad, los cerdos se pueden 
+					alimentar de sustancias naturales procedentes de la dehesa es muy normal que estemos hablando de 
+					cerdos 100% ibéricos o 75% ibéricos.<br>
+					Los jamones ibéricos pueden estar amparados por alguna <strong>DOP</strong> o estar acogidos a la 
+					<strong>norma de calidad del ibérico</strong>.<br>
+					Con la nueva norma del ibérico, los jamones procedentes de cerdos 100% ibéricos y sin cruces están 
+					identificados mediante un <strong>Precinto Negro</strong> y son los únicos que pueden ser denominados 
+					con el tradicional término <strong>“Pata Negra”</strong>. Estos jamones suponen entre el 4 y el 5% del 
+					total de producción nacional de ibérico.<br>
+					En esta Norma se identificarán mediante <strong>"Precinto Rojo"</strong> los jamones de bellota 
+					procedentes de cerdos de raza pero con cruces al 50% o al 75% de raza ibérica.<br>
+					Se usará <strong>"Precinto Verde"</strong> para los jamones provenientes de una alimentación de 
+					cebo de campo, son animales engordados con pienso pero al aire libre.<br>
+					Por último se identificarán con <strong>"Precinto Blanco"</strong> los jamones de cebo ibéricos, 
+					provenientes de cerdos 'normalmente' cruzados y que se alimentan exclusivamente de pienso y 
+					encerrados en granjas intensivas. Estos jamones suponen el 80% de la producción nacional de 
+					ibérico.<br>
+					En el caso de jamones de cerdos 100% ibéricos alimentados de bellota nos encontramos ante una 
+					de las cuatro joyas de la gastronomía a nivel mundial.<br>
+					Nos encontremos ante el tipo de jamón que nos encontremos, sea un jamón de "capa blanca" o ibérico, 
+					debe estar siempre correctamente identificado mediante su etiquetado y precinto de garantía. 
+					Es un derecho de los consumidores y de ello dependerá que sepamos con veracidad qué producto 
+					vamos a degustar.<br>
+					Hay que destacar en este aspecto el trabajo realizado por las Denominaciones de Origen como 
+					garantes de la autenticidad de los jamones y paletas que certifican, tanto en lo referente a la 
+					calidad de las piezas como en el Origen de las mismas.<br>
+					El cortador de jamón tiene la <strong>RESPONSABILIDAD</strong> de ofrecer al consumidor cada 
+					loncha en condiciones óptimas para su correcta degustación, conservando todas sus cualidades 
+					organolépticas, con la proporción correcta de magro y grasa, y siempre lo más finas posibles. 
+					Es quien da el punto final a un largo proceso de elaboración lleno, a veces, de cuidados y mimos.
+				</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            	<h3>Sabor y Distinción</h3>
+				<p style="text-align:justify;">
+					El aroma, la textura y el sabor de un jamón serán diferentes según la raza del cerdo del 
+					que provenga y de la alimientación que éste haya tenido. Además, el proceso 
+					de elaboración llevado a cabo en cada secadero o bodega dará a cada producto su toque 
+					personal.<br>
+					Según el tipo de jamón y la parte del mismo que estemos degustando (maza, babilla, punta, 
+					jarrete ... ) podemos encontrar diferentes sensaciones o matices, por no mencionar que 
+					cada jamón es único.
+				</p>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-sm-12">
+            	<h3>El Cerdo Ibérico</h3>
+				<p style="text-align:justify;">
+					La raza del cerdo ibérico, cuyo origen se remonta al año 1.000 a.C. aproximadamente, es un 
+					cruce de los cerdos salvajes autóctonos de la península ibérica con los primeros cerdos 
+					traídos por los fenicios e introducidos por el sur.<br>
+					Morfológicamente, el cerdo ibérico es más pequeño y más musculado que el cerdo blanco, de 
+					piel oscura y pelaje corto, patas estilizadas y generalmente con la pezuña de color negro. 
+					Tradicionalmente el cerdo ibérico se cría exclusivamente en la zona del suroeste de la 
+					península ibérica, uniéndose indisolublemente a la dehesa, al aprovechamiento de sus recursos 
+					naturales y al sistema de pastoreo extensivo en la misma, mientras que el cerdo blanco se cría 
+					en todo el mundo. Hoy, los cerdos de la categoría de cerdo ibérico de cebo se producen (con pienso y 
+					en régimen intensivo) en cualquier parte del país.<br>
+					Organolépticamente hablando, la diferencia entre un jamón de bellota y uno de cebo se encuentra 
+					exclusivamente en la composición de su grasa que proviene directamente del alimento consumido 
+					por el cerdo en su fase final de engorde. Las vetas de grasa son una característica en los 
+					jamones.<br>
+					Los cerdos ibéricos puros (100% raza ibérico) se producen cada año en una cantidad muy limitada 
+					y normalmente ligada a la alimentación en montanera. Su desarrollo es más lento que el de los 
+					cerdos ibéricos cruzados o los cerdos de capa blanca y tienen un menor rendimiento cárnico. Esto 
+					fue lo que provocó que, en los años cincuenta, el cerdo ibérico se cruzara con otras razas foráneas 
+					como el Duroc. Dicho cruce se mantiene hasta hoy, proporcionando un crecimiento más rápido en los 
+					animales y un mayor rendimiento cárnico, pero ofreciendo, a cambio, un cerdo con menor capacidad de 
+					adaptación a la montanera, menor capacidad de procesamiento de los frutos de la dehesa (la bellota) 
+					y por tanto menor calidad en las piezas obtenidas.<br>
+					Los cerdos de raza 100% ibéricos y los cruzados entre una cerda ibérica pura y un cerdo Duroc 
+					presentan, en general, un tamaño más pequeño, vientre más abultado, menor diámetro en las patas 
+					traseras (caña fina), orejas de mayor tamaño y caídas, hocico alargado y mayor capacidad de 
+					acumular grasa. Son cerdos rústicos que, a lo largo de los años, se han adaptado a la vida y al 
+					aprovechamiento de los recursos naturales de la dehesa mejor que los cruzados ... y todo esto 
+					desemboca en que los jamones obtenidos de los cerdos 100% ibéricos y de los cruzados también 
+					sean distintos.<br>
+					La excelencia (los jamones de máxima calidad) los encontraremos, sin duda, en los jamones de 
+					Bellota 100% ibérico que presentan unas características propias diferentes a las del resto de 
+					categorías del jamón ibérico. Dichas diferencias, en muchas ocasiones sutiles, son difíciles de 
+					apreciar, más aún si el etiquetado no es correcto o incita a confusión.
+				</p>
+			</div>
+		</div>
+    </div>
+</section>
+		</section>
+
+		<div class="push">
+		</div>
+	</section>
+
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+	
+</body>
+
+
+  
+</html>

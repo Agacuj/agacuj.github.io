@@ -1,0 +1,435 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/js/lib/angular-cookies.min.js"></script>
+  <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+	
+  <script src="/js/common.js"></script>
+  <script src="/js/common/consumidor.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl" ng-class="{ 'bodyView': !appMenu.collapsed }">
+
+	<section class="app">
+<aside class="appmenu" ng-class="{ 'collapsed': appMenu.collapsed }">
+	<div class="container">
+        <ul>
+        	<li><a href="/">Inicio</a></li>
+        	<li><a href="/que_es_agacuj">¿Qué es AGACUJ?</a></li>
+        	<li><a href="/agacuj_y_la_verdad">AGACUJ y la verdad</a></li>
+        	<li><a href="/la_cultura_del_jamon">La cultura del jamón</a></li>
+        	<li><a href="/agenda">Agenda</a></li>
+        	<li><a href="/memoria">Memoria</a></li>
+        	<li><a href="/videos">Vídeos</a></li>
+        	<li><a href="/consumidor">Área del Consumidor</a></li>
+        	<li><a href="/aquisi">Campaña <span>"</span>AQUÍ <span>SÍ"</span></a></li>
+        	<li><a href="/ser_socio">¿Quieres ser soci@?</a></li>
+        	<li><a href="/ejemplos">Actuamos con el ejemplo</a></li>
+        	<li><a href="/tambien_son_ejemplo">También son ejemplo</a></li>
+        	<li><a href="/seguimos">Seguimos</a></li>
+        </ul>
+	</div>
+</aside>
+
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div class="container">
+		<div ng-click="appMenu.collapsed = !appMenu.collapsed" class="nav toggle">
+			<img class="logo" src="/images/barlogo.png">
+			<button class="btn">
+				<span class="glyphicon glyphicon-menu-up" ng-hide="appMenu.collapsed"></span>
+				<span class="glyphicon glyphicon-menu-down" ng-show="appMenu.collapsed"></span>
+			</button>
+		</div>
+		<button onclick="location.href='/usuario'" class="btn btn-success btn-access common">
+			<span class="glyphicon glyphicon-user"></span>
+			<span class="caption">Área Soci@s</span>
+		</button>
+	</div>
+</header>
+
+		<!-- content -->
+		<section class="content">
+<section ng-controller="consumidorCtrl" class="posts">
+    <div class="container" style="padding-bottom:0;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">
+                    <span>Área del Consumidor</span>
+                </h2>
+				<h3 class="subtitle">
+					Desde <strong>AGACUJ</strong> atendemos y asesoramos.
+				</h3>
+				<p style="padding-bottom:10px;">
+					Preséntanos tus dudas, las resolveremos en el menor tiempo posible.
+				</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            	<div class="jamon">
+            		<div uib-popover="Jamón Serrano ETG" class="logo">
+            			<img src="/images/logos_jamon/etg.png" />
+            		</div>
+            		<div class="text">
+            			<span class="a">Jamón Serrano ETG</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="ETG Jamón Serrano de la Fundación" class="logo">
+            			<img src="/images/logos_jamon/serrano_fundacion.png" />
+            		</div>
+            		<div class="text">
+	            		<span class="a">ETG Jamón Serrano de la Fundación</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="IGP Trevelez" class="logo">
+            			<img src="/images/logos_jamon/trevelez.png" />
+            		</div>
+            		<div class="text">
+	            		<span class="a">IGP Trevelez</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="IGP Serón" class="logo">
+            			<img src="/images/logos_jamon/seron.png" />
+            		</div>
+            		<div class="text">
+		           		<span class="a">IGP Serón</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="DOP Dehesa de Extremadura" class="logo">
+            			<img src="/images/logos_jamon/extremadura.png" />
+            		</div>
+            		<div class="text">
+    	        		<span class="a">DOP Dehesa de Extremadura</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="DOP Guijuelo" class="logo">
+            			<img src="/images/logos_jamon/guijuelo.png" />
+            		</div>
+            		<div class="text">
+    	        		<span class="a">DOP Guijuelo</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="DOP Jamón de Huelva (Jabugo)" class="logo">
+            			<img src="/images/logos_jamon/huelva.png" />
+            		</div>
+            		<div class="text">
+    	        		<span class="a">DOP Jamón de Huelva (Jabugo)</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="DOP Los Pedroches" class="logo">
+            			<img src="/images/logos_jamon/pedroches.png" />
+            		</div>
+            		<div class="text">
+    	        		<span class="a">DOP Los Pedroches</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="DOP Teruel" class="logo">
+            			<img src="/images/logos_jamon/teruel.png" />
+            		</div>
+            		<div class="text">
+    	        		<span class="a">DOP Teruel</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="Ibérico "de Norma"" class="logo">
+            			<img src="/images/logos_jamon/norma.png" />
+            		</div>
+            		<div class="text">
+	            		<span class="a">Ibérico "de Norma"</span>
+            		</div>
+            	</div>
+            	<div class="jamon">
+            		<div uib-popover="Jamón Curado" class="logo">
+            			<img src="/images/logos_jamon/curado.png" />
+            		</div>
+            		<div class="text">
+	            		<span class="a">Jamón Curado</span>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+				<p style="padding-top:20px;">
+					Estaremos encantados de ayudarte y de que nos ayudes.
+				</p>
+            </div>
+        </div>
+    </div>
+    <div de-scroll-top style="position:absolute;width:100%;height:0;overflow:visible;background-color:#fff;">
+	    <div class="container" style="margin-top:20px;padding:0;">
+	        <div class="row" style="background-color:#fff;">
+	            <div class="col-sm-12" style="padding-bottom: 30px;border-bottom: 1px solid #e4e4e4;">
+					<button ng-hide="asked" ng-click="displayInterview()" class="btn btn-default">Pregúntanos</button>
+					<button ng-show="asked" class="btn btn-default">Tu <strong>pregunta</strong> se ha enviado con éxito</button>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <div class="container" style="margin-top:25px;margin-bottom:25px;padding-top:100px;padding-bottom:0;border:1px solid #e4e4e4;background-color:#f4f4f4;">
+        <div class="row">
+            <div class="col-sm-12" style="min-height:300px;">
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Buenas tardes.
+Mi nombre es Francis, soy de Cádiz capital y estoy interesado en realizar un curso de cortador de jamón.
+Me gustaría que al finalizar la formación lo acreditase con algún documento y por supuesto que la formación sea buena. Muchas gracias.
+Quedo a la espera
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Francis
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Francis. Según nos planteas la mejor opción son los cursos que ofrece la Escuela Internacional de Cortadores de Jamón. Hacen cursos itinerantes según la demanda de cada zona. Nosotros hacíamos un curso benéfico pero el único documento acreditativo era el de asistencia.
+Esperamos te sirva de ayuda.
+
+Saludos.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						No trabajo sobre el tronco Medirráneo, si no sobre el tronco Celta. En concreto, sobre el cerdo autóctono de Asturias, rebautizado como Gochu Asturcelta tras su recuperación, Esta pudo tener lugar gracias a los conocimientos existentes sobre cerdo Ibérico.
+Soy el asesor nutricional de la Asociación de Criadores de Gochu Asturcelta (ACGA). 
+¿Hay en AGACUJ socios asturianos? Necesito saberlo para estimular a los miembros de ACGA a que se afilien a su entidad. Les vendría muy bien hacerlo. Es cierto que el jamón asturiano y gallego no cura tan bien como el Ibérico debido a la humedad ambiental y, se usa más la salazón y el ahumado. El corte no puede ser exactamente igual, pero vendría bien una cultura propia del corte de jamón, de la mano de AGACUJ.
+Si pueden, díganme también si hay en AGACUJ socios gallegos y vascos, dedicados respectivamente a la cría del Porco Celta (ASOPORCEL) y del Euskal Txerri. También deberían tener su propia cultura del corte del jamón.
+El artículo publicado por AGACUJ en whatsaap, acerca del Gochu Asturcelta, es totalmente correcto y fue lo que me animó a hacerles esta solicitud.
+Saludos cordiales y muchas gracias.
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Alejandro Argamentería
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Alejandro. En esta ocasión soy Clemente Gómez, presidente de AGACUJ. Emiliano de Pedro me habló de usted.
+Me parece muy interesante todo lo que plantea. Efectivamente, tenemos socios en Asturias. También en el País Vasco y Galicia, pero ninguno son productores. se dedican a hostelería, alimentación y corte de jamón.
+Una actividad muy interesante podría ser visitar alguna de las explotaciones donde se puedan ver los cerdos. Toda formación será bienvenida.
+
+Muchas gracias por su interés, cualquier consulta o sugerencia mejor; si lo desea, continuamos a través de direccion@agacuj.com.
+
+Reciba un cordial saludo.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						He comprado una paletilla ibérica con precinto naranja no especifica crianza ni raza es correcto.
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Jose
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola José, perdona la tardanza. Creía que le habíamos contestado a través del telf de AGACUJ. De nuestro wasthapp jamonero.
+Si sólo tenía precinto naranja esa paletilla no era ibérica. Y por lo tanto no estaba obligada la marca a especificar nada de raza.
+Le paso Telf. de nuestro servicio de mensajes.  684453448
+
+Muchas Gracias, Y disculpe.
+
+Saludos.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Buenas tardes, 
+Estoy interesada en realizar un curso de corte. 
+Vivo en la provincia de Tarragona. 
+Muchas gracias!!!
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Maria
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola María, perdona la tardanza en contestar. Problemas técnicos lo impidieron.
+Nosotros como asociación solo realizamos un curso al año, es benéfico y se imparte en Chiclana (Cádiz). Este año será del 18 al 21 de Noviembre.
+Saludos.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Buenos días,
+Celebraremos nuestra boda en Septiembre de 2019 en Zahara de los Atunes y estamos buscando cortadores de jamón para el evento.
+Agradeceríamos si pudiesen facilitarnos cualquier contacto de la zona.
+Gracias de antemano.
+Un saludo,
+Sergio Mate
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Sergio Mate
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Sergio, perdona la tardanza en contestar. Nosotros por este medio no tratamos ningún tema relacionado con trabajo particular. Seguro que a través del lugar de celebración encuentras a los/as mejores compañeros/as.
+
+Saludos.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Hola, desde hace un tiempo estoy muy interesado en el corte de jamón y paletilla. Me gustaría saber donde debo realizar el curso para obtener el título de cortador de jamón. Soy residente en Barcelona.
+
+Muchísimas gracias!
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Guillermo
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola, ya se puso en contacto con nosotros por mail, verdad?  Y le contestamos?
+Saludos
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Estimados señores: 
+
+Vivo en Holanda y desde hace un tiempo el supermercado más importante del país AH Albert Heijn vende jamones enteros por el precio de 80 Euros de la marca Argal. Me gustaría saber si me recomiendan comprar estos jamones, y dónde puedo conseguir un cuchillo de jamón bueno. Bien en Holanda o Bélgica o bien pidiéndolo a España. 
+
+Muchas gracias por la información. 
+
+Sonia Roza
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Sonia Roza Alvarez
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Sonia, primero pedirte disculpas por la tardanza, tuvimos problemas con la web y ya parece que va.
+Con respecto a tu pregunta jamones hay de muchos tipos y muchos precios, solo por el precio y sin ninguna referencia más que la marca es muy difícil poder ayudarte. Lo que parece estar claro es que son jamones blancos (de cerdos de capa blanca).
+Y en cuanto al cuchillo hay muchos tipos y modelos, el gran escollo esta en el mantenimiento y afilado posterior. No hay ni un solo cuchillo que corte de por vida, es mejor que busques la forma de poderlos afilar, y seguro que el cuchillos que pensabas no servia resulta el mejor. 
+
+Un saludo, y gracias por confiar en nosotros, también tenemos telf wasap  
+684 453 448
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Tengo una duda. Me podrían decir por qué parte es mejor empezar el jamón a lonchear. Gracias
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Marco Antonio Vázquez Guzmán
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Marco. Es una pregunta que incluso los socios de la sección de cortadores nos hemos hecho en bastantes ocasiones y hemos llevado a debate en nuestro grupo de whatsapp. La mayoría de nosotros piensa que es mejor empezar por la zona de la maza por las siguientes razones: a) Por sentido común. Un jamón que sale del secadero y se abre tiene un tiempo para ser consumido en condiciones òptimas. En ese tiempo la pieza no deber tardar en lonchearse pues si pasa mucho tiempo dara igual el lado por el que se empieze. El tiempo necesario para comer un jamón y que pueda degustarse en perfectas condiciones no deberá dar a lugar a que maza o babilla noten diferencias significativas desde que se abrio la pieza.. b) Por estética. Lo que entra por la vista, entra por el paladar. Eso es algo que todos sabemos. Si conseguimos que el jamón guarde una apariencia apetitosa desde el principio conseguiremos sacarle mayor partido y satisfacer a nuestros comensales. Al abrirlo por la maza lograremos un corte más bonito y estético. c) Por matar la desgana. El jamón siempre empezaremos a cortarlo con más entusiasmo al principio, siendo el final del mismo el que por cansancio lo cortemos con desgana. Sobre todo en casa. Es por eso que la parte más jugosa, osea la maza, se aconseje cortar antes y no dejarla para el final donde se cortarán posiblemente lonchas más gordas por tal de acabar antes. d) por respeto a los comensales. La parte de la maza es la más valorada por la mayoría y si espermos, por ejemplo en navidad a dejarla para el final, nuestros invitados se marcharán y no podrán degustarla. Aprovechemos pues del jamón en su plenitud desde el principio y disfrutemos del hoy que el mañana, Dios dirá.... Excepciones: Catas, exigencias del protocolo en ponencias de corte y otros casos donde la babilla tome especial protagonismo. Por último y resumiendo decir que TODAS LAS PARTES DE UN JAMÓN SON BUENAS consumidas en el momento apropiado.
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Buenas. Tengo una pregunta sobre la nueva normativa. ¿El jamón de recebo está representado por algún precinto, según normativa 2014?. Si es así, ¿cual sería su color?. Gracias. Un saludo. Miguel.
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Miguel Ángel Ramos
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Hola Miguel. Los productos procedentes de animales nacidos antes de la fecha de entrada en vigor de esta norma y sacrificados con posterioridad a dicha fecha, deberán aplicar obligatoriamente estas equivalencias y precintos transitorios, siendo para el recebo de color marrón. Hay que dejar claro que la definición de jamón de recebo deja de existir en la normativa 2014. Por lo tanto no estará representado por ningún precinto. Si pulsa en el logo del logotipo de AGACUJ arriba a la izquierda, de esta misma web le saldrá un despegable y encontrará un apartado llamado "La cultura del jamón". En ese apartado encontrará más detalles sobre su pregunta. Un cordial saludo. AGACUJ
+  					</p>
+  				</div>
+  				<div style="display:inline-block;margin-bottom:10px;overflow:auto;width:90%;">
+  					<p style="font-style:italic;font-weight:bold;font-size:1.1em;margin-bottom:0;text-align:left;background-color:#fff;border:1px solid #e4e4e4;padding:15px 20px;">
+  						Buenas tardes. Estoy interesada en hacerme socia. ¿Cómo puedo hacerlo?
+  					</p>
+  					<div style="overflow:auto;">
+	  					<span style="margin:5px 15px;font-size:.9em;float:right;">
+	  						Teresa Romanos
+	  					</span>
+  					</div>
+  					<p style="padding:5px 10px;font-size:1.1em;text-align:left;">
+  						Buenas tardes Teresa. Sólo tienes que entrar en el www.agacuj.com/ser_socio y rellenar el formulario.En el menor tiempo posible nos pondremos en contacto y te indicaremos el procedimiento a seguir.
+Muchas gracias por la confianza. Un saludo.
+AGACUJ.
+  					</p>
+  				</div>
+		    </div>
+	    </div>
+    </div>
+</section>
+		</section>
+
+		<div class="push">
+		</div>
+	</section>
+
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+	
+</body>
+
+
+  
+</html>

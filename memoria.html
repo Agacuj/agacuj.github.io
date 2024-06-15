@@ -1,0 +1,1224 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/js/lib/angular-cookies.min.js"></script>
+  <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+	
+  <script src="/js/common.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl" ng-class="{ 'bodyView': !appMenu.collapsed }">
+
+	<section class="app">
+<aside class="appmenu" ng-class="{ 'collapsed': appMenu.collapsed }">
+	<div class="container">
+        <ul>
+        	<li><a href="/">Inicio</a></li>
+        	<li><a href="/que_es_agacuj">¿Qué es AGACUJ?</a></li>
+        	<li><a href="/agacuj_y_la_verdad">AGACUJ y la verdad</a></li>
+        	<li><a href="/la_cultura_del_jamon">La cultura del jamón</a></li>
+        	<li><a href="/agenda">Agenda</a></li>
+        	<li><a href="/memoria">Memoria</a></li>
+        	<li><a href="/videos">Vídeos</a></li>
+        	<li><a href="/consumidor">Área del Consumidor</a></li>
+        	<li><a href="/aquisi">Campaña <span>"</span>AQUÍ <span>SÍ"</span></a></li>
+        	<li><a href="/ser_socio">¿Quieres ser soci@?</a></li>
+        	<li><a href="/ejemplos">Actuamos con el ejemplo</a></li>
+        	<li><a href="/tambien_son_ejemplo">También son ejemplo</a></li>
+        	<li><a href="/seguimos">Seguimos</a></li>
+        </ul>
+	</div>
+</aside>
+
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div class="container">
+		<div ng-click="appMenu.collapsed = !appMenu.collapsed" class="nav toggle">
+			<img class="logo" src="/images/barlogo.png">
+			<button class="btn">
+				<span class="glyphicon glyphicon-menu-up" ng-hide="appMenu.collapsed"></span>
+				<span class="glyphicon glyphicon-menu-down" ng-show="appMenu.collapsed"></span>
+			</button>
+		</div>
+		<button onclick="location.href='/usuario'" class="btn btn-success btn-access common">
+			<span class="glyphicon glyphicon-user"></span>
+			<span class="caption">Área Soci@s</span>
+		</button>
+	</div>
+</header>
+
+		<!-- content -->
+		<section class="content">
+<section class="activities">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">
+                    <span>Memoria de actividades</span>
+                </h2>
+				<h3  class="subtitle">
+					Actividades <strong>realizadas</strong> hasta la fecha.
+				</h3>
+            </div>
+        </div>
+        
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/6220318527979520">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/opLjmC8CRNiHFMgvQdXdCXLAfM4KM9tmMfJto77LB4L7WefR0OpdJ6c8Lxq4C2HEEwb3Wh-7Z9E2G5Gb8SLSTX6jAXsoraE=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Unidad</h3>
+		  			<h4>
+		  				15/02/2023
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/6218144926400512">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/uAuROQnSbbEXGnqP2VLOjEy3ug_b2Qfmn3Ze8cKtEinkedW3rFjJO-YS6Fpp8Stw2svsWn21UNUxpPflvYeOKxG1Csm9=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Congreso y Asamblea AGACUJ</h3>
+		  			<h4>
+		  				13/01/2023
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/6302659548020736">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/GK0fX8ggGXA5ckaVx_5C07UkEeyCrKho4wPqkq29VE1BHGdgprADyzOE9jwBcPPgVwGbYkW6vI0shle0rCM7yl5EhQjZcQ=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Congreso y Asamblea AGACUJ 2023</h3>
+		  			<h4>
+		  				12/01/2023
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/6233512050950144">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/U4aRTyZYNucWXPa0UWW6rjS8D2mYTTCUjn-m6k_1ciTj23MT91dYBLarssy2gOBl7PzxeMb0kuBdyLWs0viJoOGiQRCLZA=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Jornada Formativa AGACUJ y CICAP</h3>
+		  			<h4>
+		  				24/05/2022
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/6213072033153024">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/TZXe0LyhbWW9OSkrWGA7XZm3UGwP4qbFKlXV8ff5Yl9ymF98tAiULxthFS4aFZhW-iSVj0pA3UxwsnR4ZY-wBKnkj8zdMg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>III Congreso y VI Asamblea AGACUJ</h3>
+		  			<h4>
+		  				06/02/2022
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5713545224257536">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/Pd13u_GN6qB-G7uVRbMBGVvLJtyetOMv6f76PT2zap4GujbRqvE6jE3QUWFhmH9quoQ-mz_uM5fIYZC_=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II Congreso AGACUJ y V Asamblea.</h3>
+		  			<h4>
+		  				31/05/2020
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5718138591117312">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/mL_sg6I-SOicWABUn0hXi_JY90y9z-pwVZGRGtkIaf8_dh-qp1DlUoSV49yxopFdPY_enYq4QDfF47D9aA=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II Congreso AGACUJ, JABUGO 2020</h3>
+		  			<h4>
+		  				24/02/2020
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5640807302299648">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/IDumCJPUhbKOb4_f-yUO5kDQurQauicxnzIAyEVaBLxDb9_-Wr_j51ej6gxID6dyniucn7lz9-k_v1Q3=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>V Asamblea y II Congreso AGACUJ</h3>
+		  			<h4>
+		  				23/02/2020
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5722249143255040">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/5SDrdow0E56vc30Gl2y-4j0n32Jg9UI8yi_CVibpZwWLE62pm4pzHQeNPtvZT7CWN2EROW9IrmJfDGHjGw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II Congreso AGACUJ</h3>
+		  			<h4>
+		  				23/02/2020
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5721231940648960">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/CNlEH4TTIu_C-T_bUUM5ZVtcmJvP29Sr-e9attyPZk6HD9O0Vp1umTGJKARIZLQK0IRWHZKfW8zQtEw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>VI Curso Benéfico. Campaña Ningún Niño Sin Juguetes.</h3>
+		  			<h4>
+		  				22/11/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5717989642993664">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/k57EiVT0gcjhJUfu5z7k1F2gTG1Mencvbj1WTJb2dpSLz9svhMsQGGH-1k00AopxoDfQZ8Uae92haJs=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Clases Magistrales.</h3>
+		  			<h4>
+		  				21/11/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5769324769837056">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/E0SNPDMbjNY-uw1bSS1QmffY6p9HBtzbKIUNijgsJg0q-jlcwBPwP_wbAvo9MRLOLM5ijwpE5nV0RUsyCg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Curso Benéfico 2019</h3>
+		  			<h4>
+		  				18/11/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5679417716113408">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/uSX8aio8XnttrAynwwnonR9Shvg-lDRufJ2HOUZieB649prxlCJqh0Yt30iGO9yv15wEpEXU1wCNmhE=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Asistencia de AGACUJ en el Congreso Mundial del Jamón</h3>
+		  			<h4>
+		  				01/10/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5715182412103680">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/ZZSlp5U9JQtaQfyCAH5yfw95hPohHi9gz5h_MV0Fkmpn8Kr20v-uWWtm6bKBJobpcnzKocomwEpBChxdjA=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Estructura AGACUJ</h3>
+		  			<h4>
+		  				31/03/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5646862031781888">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/Ftck9RmM6feIdSjhuksVtyaiCHYtpAmtkyud3_iBxIHrItnxvs9TUgdgMZoukBxjSphQBYJ4goYEFTaB=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>I Congreso AGACUJ</h3>
+		  			<h4>
+		  				28/02/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5630756441292800">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/FuFMcju-xGvBp5OW1T4ZW4nmCdGQQWsncPIBMKHcvr7_rnsXdLzCDhPfohz23xGql2tvjCyeCGli4PE=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Espíritu AGACUJ 2019</h3>
+		  			<h4>
+		  				15/02/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5670766611791872">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/83StEjdFgKcuZzIxUM4O4j12RBEFJZwJcvgZ97uT8M7nsV_sOnLEHlAdSyhNDpCaMHKonvHvZxLOowHw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Asamblea 2019.</h3>
+		  			<h4>
+		  				10/02/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5635703144710144">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/fQ3341XJXCxoI2sW56RLNBvp7gkN0j2-mAiCBRU7S211JBSySXAy_mEwWItLRyWUpCK4GgGHwJz0UHpDFw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>I Congreso AGACUJ y  IV Asamblea General de Socios</h3>
+		  			<h4>
+		  				08/02/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5681589568667648">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/VX5J9xofp__GUSjkGu0FD4JML4IdztKbAOAcwJK6O9tbKPK5mNdGGBTnyKQzAXjrdJkIUiR2WStQYOw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Bienvenida al 2019, el año más AGACUJENSE</h3>
+		  			<h4>
+		  				10/01/2019
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5764984579555328">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/1nBWOSV7KpnsQlNGtWuTx4zwx984u-1Z04CPeknrRm6_Pe-WiiBEQLU79oq7OxtNAR2yDa7Rd4_eMu8=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Felicitación de Navidad</h3>
+		  			<h4>
+		  				25/12/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5645386685349888">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/PcUNjAc3TL8e0uWr3AW0y-wVOKVjB4SA8PHmMini1k13sBaGDQ5HXbYlV2ttRjWvCA5vvh6Uv_EEBOHelA=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>V Curso benéfico AGACUJ para campaña ningún niño sin juguetes.</h3>
+		  			<h4>
+		  				19/11/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5715789755711488">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/k9sMxqrs_mZyE57GyVePHqHJfBfOLKxOUdH9PUTk04LTiXtEE6YSt6n0IXNp961GwRxksIwQf92yO61Q=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Reunión de coordinación.</h3>
+		  			<h4>
+		  				30/09/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5702731276746752">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/jjMEWM6s6-hLlgOANGQm8Qsk97VfkxJeAS1z9EHxfCB2nY80-PDQ8OuF2ecNxAniAwVllsrKj2mMUT34=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Corte solidario para AFA  Barbate.</h3>
+		  			<h4>
+		  				28/07/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5756147248136192">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/peA9wyYqoiH1TpgNNvT8rmhK8sGfiHbTVdU-o1uVzx9Wm7FTwM_1aol8hsC7CFHzJcvv7NCVWt1BWhk=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Corte Solidario para DEBRA (Asociación piel de mariposa)</h3>
+		  			<h4>
+		  				02/06/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5692526434451456">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/5x_yMZVqH5VLWTv2iR948acqluXKDUOqBG8LUpr5Tkb4Q4NBlaCPKDLgIIAAT2BWFRqxq4dSAUkktTFo=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Misión clara que nos hace día a día seguir con ilusión.</h3>
+		  			<h4>
+		  				31/05/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5674496161742848">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/8u-DF5vVulwLoKGsnTz_jg7i__Aq4qnuQU2uos4Uh6clCfIjPmlqjVC_60vkd6SrKH1V2s2o040nXgbC3w=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Corte Solidario</h3>
+		  			<h4>
+		  				24/03/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5686068145815552">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/bWNHyOdz7TbRe_DGGwjT4VbKtV57Safb5BTi-506jBspyeGALin4XcZwt3fI0o46Z4i_QiTH6hKO7ant=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>III Terceras Jornadas Formativas AGACUJ</h3>
+		  			<h4>
+		  				05/03/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5667766619078656">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/gvw1uVfP_2qsAMsYodcrWf3cmyOPzJ1hFhBfRMlJsfbEABTx07Q1G43pBb3P8WXJ0WA9nLxs5ZA72mw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Seminario en Escuela de Turismo y Hostelería.</h3>
+		  			<h4>
+		  				20/02/2018
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5726828727631872">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/hwtbryfFd2-5n-zr8uubugLLgonm7-rGi-wMvcOHwSQd5F5Oah16RnkN9DK3AF8yq0xzUO4XOaEzKCxp=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Curso benéfico de corte de jamón</h3>
+		  			<h4>
+		  				16/11/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5768496487071744">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/Tr4A0lRmry0Sur4Z1eOCxePWyyQwlPJ4Bv0nqFmidH720efnNt7CW7kET5wsGXAaPTPyqRZTZFNzLPCe7g=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Curso Benéfico Reyes Magos</h3>
+		  			<h4>
+		  				13/11/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5632984900173824">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/az3iiXUoCPwL408wGWJVxc0uPNk2yEAfpfkhB6vNz2Y-hkR29wqRASD7C4ESqM6dRwx3Q2yk-WkrbbieXg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Corte de Jamón Solidario</h3>
+		  			<h4>
+		  				25/08/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5711768290590720">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/hergEAKs4i2ve9-W3FMuRVf4ZCUfJjxRicp50UZRpkgjGUUF7B-9H7b5Rk_9zFe2BBxsLYGvMiOIL-5R=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>I Corte  de Jamón Solidario con la Asociacion de enfermos de Alzheimer de Barbate ( Cádiz).</h3>
+		  			<h4>
+		  				29/07/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5155492582129664">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/L_47OjWFvXTsjmTS5oxPdY4R4VPQnFTnrW8MhUbw4gy2ItklSP9zC-5FpnQXpoZdMruRwl_YcU9eFi4=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Participación en mesa redonda.</h3>
+		  			<h4>
+		  				10/06/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5088834689695744">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/hPA2iQrpKuObw6EkQscGnOOFhkDnck5VXEfDNoXgOY4abblMtBpsz0F-3_fPlZxOxWeLGfQeiq_H8Ho=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Estuvimos en el Congreso Mundial del Jamón.</h3>
+		  			<h4>
+		  				09/06/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5708573640228864">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/1p2Rv3KqSOg34bl8djLuYSGm_DhXE_etUdA_4e19Fxb27-0IYdKc23bjZNVgQAbPi9Mn_4YPd8KnzLc=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>TE UNES ?</h3>
+		  			<h4>
+		  				25/05/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5743828073971712">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/xFjSrU2uUx_sHpQNUQgABldnYPR7gC59AmQwmszWvi1TPKgs01ArqUqFbtDQBR17iWl3g1MhHMuS2izC=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>MISION</h3>
+		  			<h4>
+		  				28/03/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5647129569656832">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/WWGLeZIGVAVmo5ufLyPtNu9cTUD2JgfBnUMENVe-Q-7uLVV_o5goTnxbmiscpBqT1AncX_H2ghdsk68=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Presentación de AGACUJ en Talavera.</h3>
+		  			<h4>
+		  				26/03/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5757031206092800">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/4fLleIjyiqFCTZpANYa18p3KlczzNNT1bgMQezP3i513WSUiCV1DpsHCt8hrFlezkEHjIXSDoH_nh-vf=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>AGACUJ se presenta en Talavera de la Reina.</h3>
+		  			<h4>
+		  				26/03/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5700609697120256">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/EuUvShqbQdVFPb6ocBWioPQccie9rd1D_AK2nGIaC_pTxp0WFzkK8VA6meAtdRs43ybod05ivf1Fo5c=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Colaboración con Asociación de Hostelería.</h3>
+		  			<h4>
+		  				25/03/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5640471028170752">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/y2jDgxDOQpBbzye81dV4-p0FVnX5y28egFc7DcMpxHKzs70kyx9tSNmRbyBJXYxJzwao-m7nL3FELSFa=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Ponencias y presentación de AGACUJ en Castellón.</h3>
+		  			<h4>
+		  				06/03/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5734439678115840">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/drUPyxKW5vhho8Shd9GAvMobnct9YLfq1U8UdB3c1F6NYatwmCInvFqcyJ7jmrc8eea4it10GRGppnEQ=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II JORNADA FORMATIVA AGACUJ</h3>
+		  			<h4>
+		  				19/02/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5693646749827072">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/6uZJszgFNGUpNVQV0d5JsLldn3mncoo50duhTINmLlDNfy8KkxiCJrqks05i3MF6tz7XIPBJI6kgBAWkkQ=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Visita a Industria y Dehesa en Montanera.</h3>
+		  			<h4>
+		  				15/01/2017
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5653795627335680">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/d4tC3YTOhedMnjw6oXZUoHXAjOW2FrMPpbP2FVf4j5E8LMZfJBEWI4JT8RxOy3C_8O2shFNzsAClUJVu=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Telefono wasp. atención al consumidor.</h3>
+		  			<h4>
+		  				31/12/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5656540782526464">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/w9I2lAl61Fqn0BHAtvEZ9GMF4s0wHNqeDnHKzR6M1c1waBme1H0Y83dh6BEWBEqmnpdr0DQHeM9qlrc=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Asesoramiento al consumidor.</h3>
+		  			<h4>
+		  				30/12/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5648269346603008">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/ub9WwbYq5M-4SsuEQYn0vJerbUFzopE3CWucVuNXwluk-iCFOGeFmww5vpibZFDwqYVjasPRe6f1uLk=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Presentación Juego Formativo AGACUJ</h3>
+		  			<h4>
+		  				26/11/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5732910535540736">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/hIXjQd0NiFOpqjI6qPhkhYM0LBKzKBp64EvjS4NaEWXg8-94XaPO9xpJCoWoKEuf32ot5qql7L2qygfW=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>III Curso benéfico, Campaña Ningún niño sin juguetes.</h3>
+		  			<h4>
+		  				25/11/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5734743547052032">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/D9mcApfEUx2TQXePlDojpbjBQeQ85o2exCyfDOQBRDQybRFDEdWWniyAKA6zB6413EDKUxJNUESrAXVDVw=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Seguimos con la campaña "Aquí Sí"</h3>
+		  			<h4>
+		  				25/11/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5670666258874368">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/6SiMxBxTMhTBrpdFBOEPxS94QpHHHA_dLhPhI0ZxZgDqVe230CCb5MNx10O3X7nD0ZIcrcqClB-HCAp_=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Ponencia que es un Jamón de verdad, lo conocemos.?</h3>
+		  			<h4>
+		  				11/11/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5706504271298560">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/Gy4R8ff9j3Uf6KD1mANB2JsFQTYclCSmKWVj--SAeyLycE4NfBYqF6UstvgEmo_S4IkQc7liAF3QRmW_=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Cambio a ambito Nacional</h3>
+		  			<h4>
+		  				07/11/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5634208160546816">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/vq_-3Ltn-w1XtRs3o67zxUg2LqHjT11Y4Bc0xDl5xli3FIEfPBq1j8ZSAMNIPruNsAT2K0TyvECW21MmXQ=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Publicación en Revista 5 Tenedores.</h3>
+		  			<h4>
+		  				15/09/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5654961308303360">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/iVJHINwGJ7MHtadMg8EMTNgYG5R6EydtRPj-7QyOxMzJXheDBL_oShdvewZqsN8RT6lk_L9nm6fQLRrBqQ=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II Concurso de Cortadores de Jamón Ciudad de Chipiona.</h3>
+		  			<h4>
+		  				04/09/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5736592127819776">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/ko3fYUOOt7-PssNUbCHKZEW0iCnME_Nf5AQQVmL6Ho7zxq4QWiaOi3nJfUzCkUgsbyLZCYaL_GAJHUbDyg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Corte de Jamón Solidario " Murallas de la Segur"</h3>
+		  			<h4>
+		  				27/08/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5711129414205440">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/xZ4d0D9UuH7Foh1KSWktX0QciAhkaoLZW-eth2lwnj1zW57dP2ctKuoNbOLgaeSHB2xFzNx-SSkUV-c=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>II Verbena del Cuchillo Jamonero Solidaria.</h3>
+		  			<h4>
+		  				08/07/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5761673931522048">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/lh8TNybpPnCHyU6BxrKYSdWMPpcQJTiHmEOI8OR6-dKgI215LS3hcAXm0mOJDBKOQpInLFfjj8rC4fQ0=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Hermanamiento entre Atún Rojo Salvaje de Almadraba y Jamón de Bellota 100% Iberico DOP Los Pedroches.</h3>
+		  			<h4>
+		  				18/06/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5708235679989760">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/2Z0DXIz4DX7Zazj5VUEj6muQH4dxJXZ72beygiIHgyPvRUrrUs3wKgaB6f8Ov6WKiDFJxhD-EarNDQZ3=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Cena Benefica, La Cena de los Valientes.</h3>
+		  			<h4>
+		  				10/06/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5680163505307648">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/o-ZsRq_zvEwE7o-BIxVupGlgY0RPbeVT5A6widZXAl37EaMALAdjImEVHVWOeaemkwPtSHYcLtXMuyE=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Hermanamiento entre Atún Rojo Salvaje de Almadraba y Jamón de Bellota 100% Iberico DOP Los Pedroches.</h3>
+		  			<h4>
+		  				26/05/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5719378301550592">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/XsncwfoozfcBMjeApAcHq7WIfc4xNW0ozntmSb2JZ0IYRdSYlqga4IaW9FJtu77hh5ySuHz1RiTCmxMh=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Flayer descriptivo.</h3>
+		  			<h4>
+		  				27/04/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5769457217568768">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/9mXGQO_DfqXklfKTwf6we95A7_tOSqBILD3XR0ykrnl-LUlEz4uDki4IcngJqLJqB32a8nBlGCrMoUELgg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Taller de Jamón y su corte</h3>
+		  			<h4>
+		  				26/04/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5147809019854848">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/URekFuwpMqmWrGh-J2ELc-lqXd2N6pZv6wZwRcN2BLaQJDdFwzJR37OQvlTNfu_4olypQwV06z1L_sugKg=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Taller de corte y degustación.</h3>
+		  			<h4>
+		  				06/03/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5743573328723968">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/9r0sfLeSCL2sKF6-2cLsJ2_8C2IAo_fOLNrx4XWJvVZ7AzMbervJ5G7-YD7Aq86-zeCvZDHy8J9qn6T-=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Taller de corte.</h3>
+		  			<h4>
+		  				05/03/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5191308180193280">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/Bx5zNIggb9fyYFyExzmR1zRB8h1PHgq337DiTQ1bf0Kj9GpDharIpWL-aUETvxhPOQyQsJto3j17h08=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Muestra de Hostelería y Restauración</h3>
+		  			<h4>
+		  				04/03/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5747531812175872">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/AXuVFDTnGXWJ5LPoAff_AeIJ2cL9aBw1oc0f4JbgjO-Z5nj4Dmxl49D3MXy0JKmwjw3RpFboQkeA8j8i=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Ponencia el  Jamon ibérico .</h3>
+		  			<h4>
+		  				04/03/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5689154616688640">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/tnXY_Yt-DlB-F84TTPrWTfI2WBoeaE723FZG7mxtYh0Nw6Vnk2i5q0E0C2FgIVjfJJWi7hya4VR98NXM=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Ponencia de la Profesora Titular Hortensia Galán.</h3>
+		  			<h4>
+		  				21/02/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5695159920492544">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/hElUpqy8gQ3KSyFpSPly7d18PtgtdBNqVxYAnaytCLBOAFTHupJl3NHZjS7Ll-IBPrOJ8JL4rQAiHu_x=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Ponencia del Dr. Rafael Moreno.</h3>
+		  			<h4>
+		  				21/02/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5698390272770048">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/yYuKCs9FFMSgGeprPZKpWH_UPr8A2lLG5J26X9UjtNTD0UDCHwMHwF3Z5xaJn1QrbXvlmjjIR4-myDY=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Imagen de Mesa redonda en Jornada Formativa</h3>
+		  			<h4>
+		  				21/02/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5705241014042624">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/K-m0_cfpgQtbh-tlu4aMuGpM7zHMvqefc6P9Y3W5Wzy8nqfWHAbevoUfw-bFGKuPAnEwrd-T7KRE5rWU=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Asamblea General y primeras jornadas Formativas AGACUJ</h3>
+		  			<h4>
+		  				20/02/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5694979263430656">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/vyTKcA4gmomkQqZM_6JZVsCf__9MAff4-cXl4WzFsZxF0fT8xg-K07QFpxOsbNXWgS0EKcUuO9nXyMwx=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>AGACUJ  muy activa.</h3>
+		  			<h4>
+		  				01/02/2016
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+        <div class="activity row" style="margin-top:2em;">
+        	<a href="/actividad/5684666375864320">
+				<div class="image">
+	  				<img src="http://lh3.googleusercontent.com/FzZxi7JyKXjdSkXA9jEK3e8L9l4FmOsH6yt69tLly8vmY-3hJUXP46WwSOo8UtLFYTrVniCqpcjNiyag=s900" />
+	  			</div>
+				<div class="text">
+		  			<h3>Jornada formativa AGACUJ en el Club Naval de Oficiales</h3>
+		  			<h4>
+		  				03/12/2015
+		  				<button class="btn btn-default">
+		  					<span class="glyphicon glyphicon-chevron-right"></span>
+		  				</button>
+		  			</h4>
+	  			</div>
+	  		</a>
+        </div>
+
+    </div>
+</section>		</section>
+
+		<div class="push">
+		</div>
+	</section>
+
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+	
+</body>
+
+
+  
+</html>

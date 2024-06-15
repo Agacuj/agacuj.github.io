@@ -1,0 +1,183 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="es" ng-app="app">
+
+
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGACUJ: Asociación sin ánimo de lucro que defiende y protege la cultura del jamón</title>
+    <meta name="description" content="Personas que fomentamos la divulgación de la cultura del jamón y la protección del consumidor. Trabajar juntos para construir un horizonte de cambio en el mundo del jamón. Asociación Global de Amig@s del Cuchillo Jamonero.">
+		<meta name="keywords" content="jamon, paleta, cerdo, iberico, serrano, verdad, ejemplo, corte, cortador, global, montanera">
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/agacuj.css">
+
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59794851-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/js/lib/angular-cookies.min.js"></script>
+  <script src="/js/lib/ui-bootstrap.min.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer ></script>
+	
+  <script src="/js/common.js"></script>
+
+    <script src="/js/lib/angular-recaptcha.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl" ng-class="{ 'bodyView': !appMenu.collapsed }">
+
+	<section class="app">
+<aside class="appmenu" ng-class="{ 'collapsed': appMenu.collapsed }">
+	<div class="container">
+        <ul>
+        	<li><a href="/">Inicio</a></li>
+        	<li><a href="/que_es_agacuj">¿Qué es AGACUJ?</a></li>
+        	<li><a href="/agacuj_y_la_verdad">AGACUJ y la verdad</a></li>
+        	<li><a href="/la_cultura_del_jamon">La cultura del jamón</a></li>
+        	<li><a href="/agenda">Agenda</a></li>
+        	<li><a href="/memoria">Memoria</a></li>
+        	<li><a href="/videos">Vídeos</a></li>
+        	<li><a href="/consumidor">Área del Consumidor</a></li>
+        	<li><a href="/aquisi">Campaña <span>"</span>AQUÍ <span>SÍ"</span></a></li>
+        	<li><a href="/ser_socio">¿Quieres ser soci@?</a></li>
+        	<li><a href="/ejemplos">Actuamos con el ejemplo</a></li>
+        	<li><a href="/tambien_son_ejemplo">También son ejemplo</a></li>
+        	<li><a href="/seguimos">Seguimos</a></li>
+        </ul>
+	</div>
+</aside>
+
+<header class="app-header navbar navbar-default navbar-fixed-top">
+	<div ng-show="agacuj_aviso" style="width:100%;background-color:#f0f0f0; border-bottom:1px solid #e4e4e4;">
+        <div class="container" style="padding-top:10px;">
+			Utilizamos cookies propias y de terceros para proporcionar y mejorar 
+			nuestros servicios. Si continua navegando, consideramos que acepta su 
+			uso. Puede cambiar la configuración u obtener más información <a href="/cookies" target="_blank">aquí</a>.
+		</div>
+        <div class="container">
+			<button ng-click="agacuj_aviso = false" class="btn btn-default">Aceptar</button>
+        </div>
+	</div>
+	<div class="container">
+		<div ng-click="appMenu.collapsed = !appMenu.collapsed" class="nav toggle">
+			<img class="logo" src="/images/barlogo.png">
+			<button class="btn">
+				<span class="glyphicon glyphicon-menu-up" ng-hide="appMenu.collapsed"></span>
+				<span class="glyphicon glyphicon-menu-down" ng-show="appMenu.collapsed"></span>
+			</button>
+		</div>
+		<button onclick="location.href='/usuario'" class="btn btn-success btn-access common">
+			<span class="glyphicon glyphicon-user"></span>
+			<span class="caption">Área Soci@s</span>
+		</button>
+	</div>
+</header>
+
+		<!-- content -->
+		<section class="content">
+<section class="posts">
+    <div class="container left">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">
+                    <span>AGACUJ y la </span><span style="font-size:1.3em;border-bottom: 1px solid #000;">verdad</span>
+                </h2>
+				<p style="text-align:justify;">
+					En un sector en el que los propios operadores reconocen pública y abiertamente que al consumidor hay que devolverle la confianza, que existe la picaresca (por no llamarle fraude), que existen malas practicas y al consumidor hay que empezar a decirle la verdad.
+				</p>
+				<p style="text-align:justify;">	
+					AGACUJ adquiere el compromiso y añade el objetivo claro y conciso de buscar, filtrar y divulgar esa VERDAD.
+				</p>
+				<p style="text-align:justify;">	
+					El consumidor, en su mayoría, no sabe de la existencia de Entidades de Certificación Pública, ni de su funcionamiento, que actúan como garantes de autenticidad y origen. Denominaciones de Origen Protegidas (D.O.P), y los distintos sellos de calidad como las Indicaciones Geográficas Protegidas (I.G.P) y la Especialidad Tradicional Garantizada (E.T.G.).
+				</p>
+				<p style="text-align:justify;">	
+					De otra manera solamente será la <strong>confianza</strong> la que de lugar a la excepción.
+				</p>
+				<h3 class="subtitle" style="padding:20px 30px;">
+					QUE CADA CUAL ELIJA, EL CONSUMIDOR SERA <strong>LIBRE</strong> CUANDO CONOZCA LA <strong>VERDAD</strong>.
+				</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+				<h3 class="subtitle" style="padding:20px 30px;background-color:#E1E9B0;">
+					Los logotipos de calidad diferenciada <strong>DOP</strong>, <strong>IGP</strong> y <strong>ETG</strong>, ofrecen garantía a los consumidores acerca del origen y los métodos de producción.
+				</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+            	<div style="padding:10px;text-align:center;">
+					<img style="width:100%;max-width:250px;" src="/images/dop.png" />
+            	</div>
+				<h5 style="text-transform:uppercase;font-weight:600;"><span style="color:#E31C2F;"><strong>DOP</strong></span> <strong>D</strong>enominación de <strong>O</strong>rigen <strong>P</strong>rotegida</h5>
+				<p style="text-align:justify;">
+					Un producto que lleve el logotipo <strong>DOP</strong> ha demostrado que tiene unas características que solo son posibles gracias al entorno natural y a las habilidades de los productores de la zona de producción con la que está asociado. Para los productos con <strong>DOP</strong> se exisge que <strong>todas las fases del proceso</strong> de producción se realicen en la correspondiente zona geográfica.
+				</p>
+            </div>
+            <div class="col-sm-4">
+            	<div style="padding:10px;text-align:center;">
+					<img style="width:100%;max-width:250px;" src="/images/igp.png" />
+            	</div>
+				<h5 style="text-transform: uppercase;font-weight:600;"><span style="color:#0D4B98;"><strong>IGP</strong></span> <strong>I</strong>ndicación <strong>G</strong>eográfica <strong>P</strong>rotegida</h5>
+				<p style="text-align:justify;">
+					Un producto lleva el logotipo <strong>IGP</strong> cuando posee una carcterística específica o una reputación que lo asocian a una zona determinada en la cual tiene lugar, <strong>al menos una etapa del proceso</strong> de producción.
+				</p>
+            </div>
+            <div class="col-sm-4">
+            	<div style="padding:10px;text-align:center;">
+					<img style="width:100%;max-width:250px;" src="/images/etg.png" />
+            	</div>
+				<h5 style="text-transform: uppercase;font-weight:600;"><span style="color:#0D4B98;"><strong>ETG</strong></span> <strong>E</strong>specialidad <strong>T</strong>radicional <strong>G</strong>arantizada</h5>
+				<p style="text-align:justify;">
+					El logotipo <strong>ETG</strong> está destinado a productos ligados a un método particular de producción, que tienen unas características distintivas bien por estar compuestos por <strong>ingredientes tradicionales</strong> o bien porque se han fabricado siguiendo <strong>métodos tradicionales</strong>.
+				</p>
+            </div>
+        </div>
+    </div>
+</section>
+		</section>
+
+		<div class="push">
+		</div>
+	</section>
+
+<footer class="app" style="background-color: #333;">
+	<div class="container">
+		<div class="row" style="padding: 1rem; border-bottom: 1px solid #555;">
+			<div class="social-net">
+				<a class="facebook" href="https://www.facebook.com/agacuj" target="_blank"><span></span></a>
+				<a class="twitter" href="https://twitter.com/agacujjamon" target="_blank"><span></span></a>
+                <a class="youtube" href="https://www.youtube.com/watch?v=Ik7fpaSbYrg&list=PL6oDZvwTImWg8c9ZWOXFZcP6c5GimdO7p" target="_blank"><span></span></a>
+			</div>
+		</div>
+		<p style="padding: 2rem;">AGACUJ está en C/ Cybion 15, 11140 Conil de la Frontera, Cádiz - agacuj@hotmail.com</p>
+	</div>
+</footer>
+	
+</body>
+
+
+  
+</html>
